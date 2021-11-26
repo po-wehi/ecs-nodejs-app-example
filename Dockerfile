@@ -16,3 +16,4 @@ USER node
 EXPOSE $PORT
 
 ENTRYPOINT ["npm", "start"]
+
