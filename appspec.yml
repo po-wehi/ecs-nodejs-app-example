@@ -7,3 +7,7 @@ Resources:
         LoadBalancerInfo:
           ContainerName: "<APP_NAME>"
           ContainerPort: <SERVICE_PORT>
+Hooks:
+  AfterAllowTestTraffic:
+    - location: test.sh
+
