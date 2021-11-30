@@ -1,4 +1,4 @@
-FROM python:3 
+FROM circleci/python:3 
 
 WORKDIR /ecs-app
 
