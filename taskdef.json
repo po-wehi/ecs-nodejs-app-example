@@ -13,6 +13,13 @@
           "containerPort": <SERVICE_PORT>
         }
       ],
+      "logConfiguration": {
+        "logDriver": "awsfirelens",
+        "options": {
+          "apiKey": <NEWRELIC_API>,
+          "Name": "newrelic"
+        }
+      },
       "environment": [
         {
           "name": "PORT",
@@ -23,6 +30,16 @@
           "value": "<APP_NAME>"
         }
       ]
+    },
+    {
+      "portMappings": [],
+      "environment": [],
+      "image": "533243300146.dkr.ecr.us-east-1.amazonaws.com/newrelic/logging-firelens-fluentbit",
+      "name": "log_router",
+      "firelensConfiguration": {
+        "type": "fluentbit"
+      },
+      "memoryReservation": 100
     }
   ],
   "requiresCompatibilities": [

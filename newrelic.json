@@ -2,12 +2,6 @@
   "executionRoleArn": "<YOUR_TASK_EXECUTION_ROLE>",
   "containerDefinitions": [
     {
-      "secrets": [
-        {
-          "valueFrom": "<SYSTEM_MANAGER_LICENSE_PARAMETER_NAME>",
-          "name": "NRIA_LICENSE_KEY"
-        }
-      ],
       "portMappings": [],
       "cpu": 200,
       "memory": 384,
@@ -23,6 +17,10 @@
         {
           "name": "NRIA_VERBOSE",
           "value": "0"
+        },
+        {
+          "name": "NRIA_LICENSE_KEY",
+          "value": "eu01xxee5e757444394bc3d0a6963d0906d0NRAL"
         },
         {
           "name": "NRIA_CUSTOM_ATTRIBUTES",
